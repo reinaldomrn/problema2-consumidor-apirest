@@ -1,0 +1,41 @@
+<app-headers></app-headers>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Convertidor Time Zone</h3>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4 offset-md-2">
+      <div class="form-grou">
+        <label for="">Hora</label>
+        <input [(ngModel)]="hora" name="hora" type="time" class="form-control" step="2">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="">Time Zone</label>
+        <input [(ngModel)]="timeZone" name="timeZone" type="number" class="form-control">
+      </div>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="offset-md-2 col-md-8">
+      <button class="btn btn-success btn-block" (click)="getTimeZone()">Calcular</button>
+    </div>
+  </div>
+  <br>
+  <div class="row" *ngIf="result != ''">
+    <div class="col-md-12">
+      <h4>Resultado</h4>
+      <hr>
+    </div>
+  </div>
+  <div class="row" *ngIf="result != ''">
+    <div class="col-md-12">
+      <code>{{ result }}</code>
+     </div>
+  </div>
+</div>
